@@ -1,6 +1,6 @@
 ## Example: Behavior Trees for LLM Chatbots
 
-This simple example shows how complex interaction can be coordinated between humans and an LLM chatbot to go through a complex goal-directed interaction while utilizing LLM chatbot capabilities.
+This simple example shows how complex interaction can be coordinated between humans and an LLM chatbot to go through a complex goal-directed interaction while utilizing LLM chatbot capabilities using [Behavior Trees](https://en.wikipedia.org/wiki/Behavior_tree_%28artificial_intelligence,_robotics_and_control%29).
 
 The demonstration case is a scheme where the bot and people are in the same chat channel or group.
 
@@ -16,6 +16,8 @@ The entities in this use case are:
 - LLM Chatbot
 
 ![](eventplanner.png)
+
+The Behavior Tree is event-driven and is ticked only as things happen in the channel, or an event is emitted from a behavior.
 
 In the above example, the root node ticks all its children in parallel (parallelograms), and each of the children represent parallel goals of the system.
 
