@@ -1,0 +1,35 @@
+digraph pastafarianism {
+ordering=out;
+graph [fontname="times-roman"];
+node [fontname="times-roman"];
+edge [fontname="times-roman"];
+EventPlanner [fillcolor=gold, fontcolor=black, fontsize=9, label="EventPlanner\ntype", shape=parallelogram, style=filled];
+MaintainRoster [fillcolor=gold, fontcolor=black, fontsize=9, label="MaintainRoster\ntype", shape=parallelogram, style=filled];
+EventPlanner -> MaintainRoster;
+NewUser [fillcolor=orange, fontcolor=black, fontsize=9, label="Ⓜ NewUser", shape=box, style=filled];
+MaintainRoster -> NewUser;
+NewMessageIsUserJoining [fillcolor=gray, fontcolor=black, fontsize=9, label=NewMessageIsUserJoining, shape=ellipse, style=filled];
+NewUser -> NewMessageIsUserJoining;
+IntroduceTheSystemToNewUser [fillcolor=gray, fontcolor=black, fontsize=9, label=IntroduceTheSystemToNewUser, shape=ellipse, style=filled];
+NewUser -> IntroduceTheSystemToNewUser;
+AddUserToEvent [fillcolor=gray, fontcolor=black, fontsize=9, label=AddUserToEvent, shape=ellipse, style=filled];
+NewUser -> AddUserToEvent;
+LeavingUser [fillcolor=orange, fontcolor=black, fontsize=9, label="Ⓜ LeavingUser", shape=box, style=filled];
+MaintainRoster -> LeavingUser;
+NewMessageIsUserLeaving [fillcolor=gray, fontcolor=black, fontsize=9, label=NewMessageIsUserLeaving, shape=ellipse, style=filled];
+LeavingUser -> NewMessageIsUserLeaving;
+RemoveUserFromEvent [fillcolor=gray, fontcolor=black, fontsize=9, label=RemoveUserFromEvent, shape=ellipse, style=filled];
+LeavingUser -> RemoveUserFromEvent;
+PlanEvent [fillcolor=orange, fontcolor=black, fontsize=9, label="Ⓜ PlanEvent", shape=box, style=filled];
+EventPlanner -> PlanEvent;
+HaveAllUsersSignaledTheirAvailability [fillcolor=gray, fontcolor=black, fontsize=9, label=HaveAllUsersSignaledTheirAvailability, shape=ellipse, style=filled];
+PlanEvent -> HaveAllUsersSignaledTheirAvailability;
+SummarizeSuitableEventTime [fillcolor=gray, fontcolor=black, fontsize=9, label=SummarizeSuitableEventTime, shape=ellipse, style=filled];
+PlanEvent -> SummarizeSuitableEventTime;
+MaintainAvailabilities [fillcolor=orange, fontcolor=black, fontsize=9, label="Ⓜ MaintainAvailabilities", shape=box, style=filled];
+EventPlanner -> MaintainAvailabilities;
+NewMessageIsUserAvailability [fillcolor=gray, fontcolor=black, fontsize=9, label=NewMessageIsUserAvailability, shape=ellipse, style=filled];
+MaintainAvailabilities -> NewMessageIsUserAvailability;
+UpdateUserAvailability [fillcolor=gray, fontcolor=black, fontsize=9, label=UpdateUserAvailability, shape=ellipse, style=filled];
+MaintainAvailabilities -> UpdateUserAvailability;
+}
