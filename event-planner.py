@@ -9,7 +9,7 @@ from py_trees.common import ParallelPolicy
 
 # Event planner is a demo of a complex interaction between a chatbot and
 # multiple chat participants.
-# The orchestrator sits in between the LLM chatbot and the discussion
+# The coordinator sits in between the LLM chatbot and the discussion
 # participants herding them towards conclusion.
 
 # The general outline of this demonstration interaction is as follows:
@@ -19,13 +19,13 @@ from py_trees.common import ParallelPolicy
 # - Once everyone has told their availability, there will be a conclusion
 #   of times suitable to all, or no such time.
 
-# So, the orchestrator will track the participants, and tell them
+# So, the coordinator will track the participants, and tell them
 # how the system works when they first join.
 # It will pass peoples messages to a chatbot as appropriate to transform them
 # into a standard form.
-# Once all participants have told of their availability, the orchestrator will compile
+# Once all participants have told of their availability, the coordinator will compile
 # together the summary.
-# The orchestrator can utilize the chatbot for various purposes during this process.
+# The coordinator can utilize the chatbot for various purposes during this process.
 
 class HaveAllUsersSignaledTheirAvailability(py_trees.behaviour.Behaviour):
     """
