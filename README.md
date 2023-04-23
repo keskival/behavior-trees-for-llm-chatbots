@@ -7,12 +7,12 @@ The demonstration case is a scheme where the bot and people are in the same chat
 The bot is set up to organize an event, which it does by finding a time suitable to everyone. The use case was selected to be meaningfully complex and easy to understand.
 
 People can signal their intent to attend the event, to cancel their attendance, and to tell their event availabilities.
-All these are normal natural language, and the system uses LLM chatbot capabilities to update the state of the consensus, and ultimately tell the user what the conclusion was.
+All these are normal natural language, and the system uses LLM chatbot capabilities to update the state of the consensus, and ultimately tell the users what the conclusion was.
 
 The entities in this use case are:
 - User(s)
 - Channel
-- Orchestrator (runs the Behavior Tree)
+- Coordinator (runs the Behavior Tree)
 - LLM Chatbot
 
 ![](eventplanner.png)
