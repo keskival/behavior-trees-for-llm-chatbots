@@ -1,4 +1,4 @@
-## Example: Behaviour Trees for LLM Chatbots
+## Example: Behavior Trees for LLM Chatbots
 
 This simple example shows how complex interaction can be coordinated between humans and an LLM chatbot to go through a complex goal-directed interaction while utilizing LLM chatbot capabilities.
 
